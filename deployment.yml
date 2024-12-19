@@ -1,0 +1,21 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerproject
+  labels:
+    app: docker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: docker
+  template:
+    metadata:
+      labels:
+        app: docker
+    spec:
+      containers:
+      - name: docker
+        image: siddhantkudal/todoapp:19
+        ports:
+        - containerPort: 80
