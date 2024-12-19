@@ -18,4 +18,4 @@ spec:
       - name: docker
         image: siddhantkudal/todoapp:19
         ports:
-        - containerPort: 80
+        - containerPort: 8000
